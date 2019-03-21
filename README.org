@@ -1,4 +1,4 @@
 * About
   This is a litle lib implementing transducers.
   It is primaly a way for me to learn more abount common lisp way of distribute and test software.
-  Feel free to contribute and make PR. Even thought it is toy project, it can still be usefull for someone.
+  Feel free to contribute and a make PR. Even thought it is a toy project, it can still be usefull to someone.
