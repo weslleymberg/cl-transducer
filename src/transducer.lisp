@@ -1,4 +1,4 @@
-(in-package :transducer)
+(in-package :cl-transducer)
 
 (defmacro flip (func)
   "Flips the input of a two parameter function"
@@ -30,4 +30,3 @@ from last to fisrt.
   (reverse (reduce (combine (flip cons) plus-1 even)
                    '(1 2 3 4 5)
                    :initial-value nil)))
-

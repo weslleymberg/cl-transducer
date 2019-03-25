@@ -1,6 +1,6 @@
 (in-package :cl-user)
 
-(defpackage #:transducer
+(defpackage #:cl-transducer
   (:use #:cl #:cl-user)
   (:export #:tmap
            #:tfilter
