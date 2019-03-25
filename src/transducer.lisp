@@ -25,6 +25,7 @@ from last to fisrt.
   (reduce (lambda (acc x) (funcall x acc)) funcs
           :initial-value base))
 
+#+nil
 (let ((even (tfilter evenp))
       (plus-1 (tmap 1+)))
   (reverse (reduce (combine (flip cons) plus-1 even)
