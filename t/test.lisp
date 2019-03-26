@@ -1,0 +1,16 @@
+(fiasco:define-test-package #:cl-transducer-test
+  (:use #:cl-transducer))
+
+(in-package #:cl-transducer-test)
+
+(deftest test-reduce-to-a-single-output ()
+  (let ((input '(1 2 3 4))
+        (reducer (combine #'+ (tmap 1+) (tfilter evenp))))
+    (is (equal 8 (reduce reducer input :initial-value 0)))))
+
+(deftest test-reduce-to-list ()
+  (is (equal '(2 4) (reverse (reduce (combine (flip cons) 
+                                              (tmap incf) 
+                                              (tfilter oddp))
+                                     '(1 2 3 4)
+                                     :initial-value nil)))))
