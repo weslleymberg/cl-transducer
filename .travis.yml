@@ -16,6 +16,7 @@ cache:
 
 install:
   - curl -L https://raw.githubusercontent.com/roswell/roswell/release/scripts/install-for-ci.sh | sh
+  - ros install fiasco
 
 script:
   - ros -l cl-transducer.asd -e "(or (asdf:test-system :cl-transducer) (uiop:quit -1))"
