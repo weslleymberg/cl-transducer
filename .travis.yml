@@ -18,4 +18,4 @@ install:
   - curl -L https://raw.githubusercontent.com/roswell/roswell/release/scripts/install-for-ci.sh | sh
 
 script:
-  - ros -l cl-transducer.asd -e "(or (asdf:test-system :cl-transducer) (uiop:exit -1))"
+  - ros -l cl-transducer.asd -e "(or (asdf:test-system :cl-transducer) (uiop:quit -1))"
