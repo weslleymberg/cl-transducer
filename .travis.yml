@@ -3,6 +3,7 @@ sudo: false
 
 env:
   global:
+    - PATH=~/.roswell/bin:$PATH
     - ROSWELL_INSTALL_DIR=$HOME/.roswell
   matrix:
     - LISP=sbcl-bin
@@ -15,7 +16,6 @@ cache:
 
 install:
   - curl -L https://raw.githubusercontent.com/roswell/roswell/release/scripts/install-for-ci.sh | sh
-  - ros install fiasco
 
 script:
   - ros -l cl-transducer.asd -e "(or (asdf:test-system :cl-transducer) (uiop:exit -1))"
