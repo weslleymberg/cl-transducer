@@ -1,4 +1,4 @@
-[[https://travis-ci.org/weslleymberg/cl-transducer.svg?branch=master][Build Status]]
+[[[[https://travis-ci.org/weslleymberg/cl-transducer.svg?branch=master]]]]
 
 * About
   This is a litle lib implementing transducers.
