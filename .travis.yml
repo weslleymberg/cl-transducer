@@ -16,7 +16,7 @@ cache:
 
 install:
   - curl -L https://raw.githubusercontent.com/roswell/roswell/release/scripts/install-for-ci.sh | sh
-  - ros install fiasco
+  - ros install fiveam
 
 script:
-  - ros -l cl-transducer.asd -e "(or (asdf:test-system :cl-transducer) (uiop:quit -1))"
+  - ros -l cl-transducer.asd -s cl-transducer/tests -e "(in-package :cl-transducer-tests)" -e "(or (run-all-tests) (uiop:quit -1))"

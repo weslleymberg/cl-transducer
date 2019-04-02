@@ -3,4 +3,5 @@
   (:export #:tmap
            #:tfilter
            #:flip
-           #:combine))
+           #:combine
+           #:transducer))

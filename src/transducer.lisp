@@ -25,6 +25,10 @@ from last to fisrt.
   (reduce (lambda (acc x) (funcall x acc)) funcs
           :initial-value base))
 
+(defmacro transducer (init-value base &rest funcs)
+  (let ((arg (gensym)))
+    `(lambda (,arg) (reduce (combine ,base ,@funcs) ,arg :initial-value ,init-value))))
+
 #+nil
 (let ((even (tfilter evenp))
       (plus-1 (tmap 1+)))

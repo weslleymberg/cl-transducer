@@ -6,12 +6,10 @@
   :serial t
   :pathname "src"
   :components ((:file "packages")
-               (:file "transducer"))
-  :in-order-to ((test-op (test-op "cl-transducer/tests"))))
+               (:file "transducer")))
 
 (asdf:defsystem #:cl-transducer/tests
   :description "Test suite for cl-transducer"
-  :depends-on ("cl-transducer" "fiasco")
+  :depends-on ("cl-transducer" "fiveam")
   :pathname "t"
-  :components ((:file "test"))
-  :perform (test-op (o c) (symbol-call :fiasco '#:run-tests :cl-transducer-test)))
+  :components ((:file "test")))
