@@ -1,5 +1,8 @@
 [[https://travis-ci.org/weslleymberg/cl-transducer.svg?branch=master]]
 
+* Not Mantained!
+To a more complete transducer library see https://git.sr.ht/~fosskers/cl-transducers
+
 * About
   This is a litle lib implementing transducers.
   It is primaly a way for me to learn more about common lisp way of distribute and test software.
