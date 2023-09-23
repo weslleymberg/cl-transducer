@@ -1,5 +1,5 @@
 (asdf:defsystem #:cl-transducer
-  :description "A library of useful functions/macros to create transducers"
+  :description "A library of useful functions/macros to create transducers. (NOT MANTAINED: to a more complete transducer library see https://git.sr.ht/~fosskers/cl-transducers)"
   :author "Weslleymberg Lisboa <weslleym.lisboa@gmail.com>"
   :license "MIT"
   :version "0.1.0"
